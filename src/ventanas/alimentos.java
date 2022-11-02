@@ -7,13 +7,14 @@ class menu_opciones{
 }
 
 public class alimentos extends JOptionPane {
-    public alimentos(){
+    public int alimentos(){
         this.setSize(300,100);
                int opc1=alimentos.showOptionDialog(null,"Elige opción","Alimentos",
                 JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,menu_opciones.menu_alimentos,
                 menu_opciones.menu_alimentos[0]);
-        if(opc1==0){opciones.alimentos=0;}
-        if(opc1==1){opciones.alimentos=1;}
-        if(opc1==2){opciones.alimentos=2;}
+        //if(opc1==0){opciones.alimentos=0;}
+        //if(opc1==1){opciones.alimentos=1;}
+        //if(opc1==2){opciones.alimentos=2;}
+        return opc1;
     }
 }
