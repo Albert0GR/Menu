@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a62e4e9e-2a2a-4760-b562-9b517b9df18f" name="Changes" comment="branch1">
-      <change afterPath="$PROJECT_DIR$/src/ventanas/desayunoOpciones.java" afterDir="false" />
+    <list default="true" id="a62e4e9e-2a2a-4760-b562-9b517b9df18f" name="Changes" comment="metodoOOBJ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ventanas/Opciones.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ventanas/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventanas/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ventanas/alimentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventanas/alimentos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +58,26 @@
       <option name="project" value="LOCAL" />
       <updated>1667415596364</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="metodoOOBJ">
+      <created>1667423904829</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667423904829</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -77,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="branch1" />
-    <option name="LAST_COMMIT_MESSAGE" value="branch1" />
+    <MESSAGE value="metodoOOBJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="metodoOOBJ" />
   </component>
 </project>

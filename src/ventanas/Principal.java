@@ -8,7 +8,7 @@ class usuario{
     float precio=0;
     int cantidad=0;
 
-    public usuario(String producto, int precio, int cantidad) {
+    public usuario(String producto, float precio, int cantidad) {
     }
 }
 public class Principal {
@@ -17,7 +17,7 @@ public class Principal {
 
         alimentos v1= new alimentos();
         usuario array_usuario[] = new usuario[10];
-        array_usuario[1]= new usuario("cerveza",23,5);
+        //array_usuario[1]= new usuario("cerveza",23,5);
 
 
         switch (v1.alimentos()){
@@ -27,9 +27,12 @@ public class Principal {
                 switch (o1.desayunoOpciones()){
                     case 0://bebidas
                         int op=o1.desayunoOpcionesBebidas();
-                        array_usuario[1].producto=desayuno_opciones.bebidas[op];
-                        array_usuario[1].precio= desayuno_opciones.precio_bebidas[op];
-                        System.out.println("producto:"+array_usuario[1].producto+"precio:"+array_usuario[1].precio);
+                        array_usuario[op]=new usuario(desayuno_opciones.bebidas[op],
+                                desayuno_opciones.precio_bebidas[op],
+                                5);
+                        array_usuario[op].producto=desayuno_opciones.bebidas[op];
+                        array_usuario[op].precio= desayuno_opciones.precio_bebidas[op];
+                        System.out.println("producto:"+array_usuario[op].producto+"precio:"+array_usuario[op].precio);
                         break;
                     default:
                 }
