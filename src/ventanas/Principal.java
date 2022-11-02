@@ -32,7 +32,11 @@ public class Principal {
                                 5);
                         array_usuario[op].producto=desayuno_opciones.bebidas[op];
                         array_usuario[op].precio= desayuno_opciones.precio_bebidas[op];
-                        System.out.println("producto:"+array_usuario[op].producto+"precio:"+array_usuario[op].precio);
+                        array_usuario[op].cantidad=6;
+
+                        System.out.println("cantidad:"+array_usuario[op].cantidad+
+                                "producto:"+array_usuario[op].producto+"precio:"+array_usuario[op].precio+
+                                "total:"+(array_usuario[op].precio)*(array_usuario[op].cantidad));
                         break;
                     default:
                 }
