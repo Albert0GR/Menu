@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a62e4e9e-2a2a-4760-b562-9b517b9df18f" name="Changes" comment="metodoOOBJ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ventanas/desayunoOpciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventanas/desayunoOpciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ventanas/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventanas/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ventanas/desayunoOpciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventanas/opcionesMaster.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
