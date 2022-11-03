@@ -20,7 +20,14 @@ public class desayunoOpciones extends JOptionPane {
     }
     public int desayunoOpcionesBebidas(){
         this.setSize(300,100);
-        int opc2=alimentos.showOptionDialog(null,"Elige opción","Alimentos",
+        List<String> List = new ArrayList<String>();
+        for (int i=0;i<desayuno_opciones.bebidas.length;i++) {
+            List.add(String.valueOf(desayuno_opciones.bebidas[i]) + "->" + desayuno_opciones.precio_bebidas[i]);
+        }
+        String[] arr ;
+        arr = new String[ List.size() ];
+        List.toArray(arr);
+        int opc2=alimentos.showOptionDialog(null,arr,"Alimentos",
                 JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,desayuno_opciones.bebidas,
                 desayuno_opciones.bebidas[0]);
         return opc2;
