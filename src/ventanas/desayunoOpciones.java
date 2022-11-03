@@ -1,6 +1,8 @@
 package ventanas;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class desayuno_opciones{
     static  String[] menu_alimentos ={"Bebidas","Pan","Fruta","Comida"};
@@ -22,6 +24,28 @@ public class desayunoOpciones extends JOptionPane {
                 JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,desayuno_opciones.bebidas,
                 desayuno_opciones.bebidas[0]);
         return opc2;
+    }
+
+    public String desayunoCantidadBebidas(){
+        this.setSize(300,100);
+        //int opc2=JOptionPane.showInputDialog(null,"ingresa cantidad","titulo","int",);
+        //return opc2;
+        String opc= alimentos.showInputDialog("INGRESA CANTIDAD");
+        return opc;
+    }
+
+    public void mostrar(usuario[] n){
+        List<String> List = new ArrayList<String>();
+        List.add(String.valueOf(n[0].cantidad)+" "+n[0].producto+" X "+n[0].precio+" = $"+n[0].total);
+        List.add(String.valueOf(n[0].cantidad)+" "+n[0].producto+" X "+n[0].precio+" = $"+n[0].total);
+        List.add(String.valueOf(n[0].cantidad)+" "+n[0].producto+" X "+n[0].precio+" = $"+n[0].total);
+        String[] arr ;
+        arr = new String[ List.size() ];
+        List.toArray(arr);
+        String[] str ={String.valueOf(n[0].cantidad)+" "+n[0].producto+" X "+n[0].precio+" = $"+n[0].total,
+                "Pan","Fruta","Comida"};
+        showMessageDialog(null, arr,
+                "Comprobante", JOptionPane.INFORMATION_MESSAGE, null);
     }
 }
 
