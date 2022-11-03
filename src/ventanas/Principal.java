@@ -11,9 +11,7 @@ class usuario{
     int cantidad=0;
     float total=0;
 
-    int numArticulo=0;
-
-    public usuario(String producto, float precio, int cantidad,float total,int numArticulo) {
+    public usuario(String producto, float precio, int cantidad,float total) {
 
     }
 }
@@ -24,15 +22,17 @@ public class Principal extends  JOptionPane{
     public static void main(String[] args) {
         int i=0;
         alimentos v1= new alimentos();
-        usuario array_usuario[] = new usuario[10];
+        usuario[] array_usuario = new usuario[10];
         //array_usuario[1]= new usuario("cerveza",23,5);
 
 
         do {
             opcionesMaster d1 = new opcionesMaster();
+            opcionesMaster d2 = new opcionesMaster();
             switch (v1.alimentos()) {
 
                 case 0://desayuno
+
                     switch (d1.opcionesGeneral(desayuno_opciones.menu_alimentos)) {
                         case 0://bebidas
                             int op = d1.opcionesTipoPrecio(desayuno_opciones.bebidas, desayuno_opciones.precio_bebidas);
@@ -59,16 +59,16 @@ public class Principal extends  JOptionPane{
                     switch (d1.opcionesGeneral(comida_opciones.menu_alimentos)) {
 
                         case 0://bebidas
-                            int op = d1.opcionesTipoPrecio(comida_opciones.bebidas, comida_opciones.precio_bebidas);
-                            d1.guardar(array_usuario, comida_opciones.bebidas, comida_opciones.precio_bebidas, op, i);
+                            int op1 = d2.opcionesTipoPrecio(comida_opciones.bebidas, comida_opciones.precio_bebidas);
+                            d2.guardar(array_usuario, comida_opciones.bebidas, comida_opciones.precio_bebidas, op1, i);
                             break;
                         case 1://comida
-                            op = d1.opcionesTipoPrecio(comida_opciones.comida, comida_opciones.precio_comida);
-                            d1.guardar(array_usuario, comida_opciones.comida, comida_opciones.precio_comida, op, i);
+                            op1 = d2.opcionesTipoPrecio(comida_opciones.comida, comida_opciones.precio_comida);
+                            d2.guardar(array_usuario, comida_opciones.comida, comida_opciones.precio_comida, op1, i);
                             break;
                         case 2:
-                            op = d1.opcionesTipoPrecio(comida_opciones.postre, comida_opciones.precio_postre);
-                            d1.guardar(array_usuario, comida_opciones.postre, comida_opciones.precio_postre, op, i);
+                            op1 = d2.opcionesTipoPrecio(comida_opciones.postre, comida_opciones.precio_postre);
+                            d2.guardar(array_usuario, comida_opciones.postre, comida_opciones.precio_postre, op1, i);
                             break;
                         default:
                             System.out.println("valor invalido");
@@ -102,26 +102,23 @@ public class Principal extends  JOptionPane{
             i++;
         }while (flag()!=1);
 
-        //opcionesMaster o1=new opcionesMaster();
-        //o1.mostrar(array_usuario);
         mostrar(array_usuario,i);
-        i=0;
+        //i=0;
 
     }
 
     public static int flag(){
         String[] op={"SI","Imprimir comprobante"};
-        int opc1=alimentos.showOptionDialog(null,"deseas seguir comprando?","Comprobante",
+        return alimentos.showOptionDialog(null,"deseas seguir comprando?","Comprobante",
                 JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,op,
                 op[0]);
-        return opc1;
     }
 
     public static  void mostrar(usuario[] n,int tope){
-        List<String> List = new ArrayList<String>();
+        List<String> List = new ArrayList<>();
         float total=0;
         for(int i=0;i<tope;i++) {
-            List.add(String.valueOf(n[i].cantidad) + " " + n[i].producto + " X " + n[i].precio + " = $" + n[i].total);
+            List.add(n[i].cantidad + " " + n[i].producto + " X " + n[i].precio + " = $" + n[i].total);
             total+=n[i].total;
         }
         List.add("por pagar:"+total);
@@ -130,8 +127,6 @@ public class Principal extends  JOptionPane{
         String[] arr ;
         arr = new String[ List.size() ];
         List.toArray(arr);
-        String[] str ={String.valueOf(n[0].cantidad)+" "+n[0].producto+" X "+n[0].precio+" = $"+n[0].total,
-                "Pan","Fruta","Comida"};
         showMessageDialog(null, arr,
                 "Comprobante", JOptionPane.INFORMATION_MESSAGE, null);
     }

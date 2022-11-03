@@ -50,32 +50,30 @@ public class opcionesMaster extends JOptionPane {
     }
     public int opcionesTipoPrecio(String[] s, float[] p){
         this.setSize(300,100);
-        List<String> List = new ArrayList<String>();
+        List<String> List = new ArrayList<>();
         for (int i=0;i<s.length;i++) {
-            List.add(String.valueOf(s[i]) + "->" + p[i]);
+            List.add(s[i] + "->" + p[i]);
         }
         String[] arr ;
         arr = new String[ List.size() ];
         List.toArray(arr);
-        int opc2=alimentos.showOptionDialog(null,arr,"Alimentos",
+        return alimentos.showOptionDialog(null,arr,"Alimentos",
                 JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,s,
                 s[0]);
-        return opc2;
     }
 
     public String cantidadProductos(){
         this.setSize(300,100);
         //int opc2=JOptionPane.showInputDialog(null,"ingresa cantidad","titulo","int",);
         //return opc2;
-        String opc= showInputDialog("INGRESA CANTIDAD");
-        return opc;
+        return showInputDialog("INGRESA CANTIDAD");
     }
 
-    public usuario[] guardar(usuario[] array, String[] articulo, float[] precio, int op, int i){
+    public void guardar(usuario[] array, String[] articulo, float[] precio, int op, int i){
 
         array[i]=new usuario(articulo[op],
                 precio[op],
-                5,0,0);
+                5,0);
         array[i].producto=articulo[op];
         array[i].precio= precio[op];
         array[i].cantidad= Integer.parseInt(cantidadProductos());
@@ -83,21 +81,8 @@ public class opcionesMaster extends JOptionPane {
         System.out.println("cantidad: |"+array[i].cantidad+
                 "Producto:"+array[i].producto+"Precio: "+array[i].precio+
                 "Total:"+(array[i].precio)*(array[i].cantidad));
-        return array;
+
     }
 
-    public void mostrar(usuario[] n){
-        List<String> List = new ArrayList<String>();
-        List.add(String.valueOf(n[0].cantidad)+" "+n[0].producto+" X "+n[0].precio+" = $"+n[0].total);
-        List.add(String.valueOf(n[1].cantidad)+" "+n[1].producto+" X "+n[1].precio+" = $"+n[1].total);
-        //List.add(String.valueOf(n[2].cantidad)+" "+n[2].producto+" X "+n[2].precio+" = $"+n[2].total);
-        String[] arr ;
-        arr = new String[ List.size() ];
-        List.toArray(arr);
-        String[] str ={String.valueOf(n[0].cantidad)+" "+n[0].producto+" X "+n[0].precio+" = $"+n[0].total,
-                "Pan","Fruta","Comida"};
-        showMessageDialog(null, arr,
-                "Comprobante", JOptionPane.INFORMATION_MESSAGE, null);
-    }
 }
 
