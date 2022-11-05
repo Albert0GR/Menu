@@ -51,7 +51,8 @@ public class Principal extends  JOptionPane{
                             d1.guardar(array_usuario, desayuno_opciones.comida, desayuno_opciones.precio_comida, op, i);
                             break;
                         default:
-                            System.out.println("valor invalido");
+                            v1.alimentos();
+                            //System.out.println("valor invalido");
                     }
 
                     break;
@@ -94,7 +95,8 @@ public class Principal extends  JOptionPane{
                     }
                     break;
                 default:
-                    System.out.println("valor invalido");
+                    v1.alimentos();
+                    //System.out.println("valor invalido");
 
             }
 
